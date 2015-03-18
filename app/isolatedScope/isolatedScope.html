@@ -1,0 +1,19 @@
+<p>This text comes from the controller. We will use isolated scope.</p>
+<div class="form-group">
+	<label class="control-label">Fiat</label>
+	<br/>
+	Car make: <span>{{carFiat.make}}</span>
+	<br/>
+	Car Hp: <span>{{carFiat.hp}}</span>
+	</br>
+</div>
+<div class="form-group">
+	<label class="control-label">Colors</label>
+	<br/>
+	{{colorRed | upper : 'yes'}}
+	<br/>
+	{{colorBlue}}
+</div>
+<hr/>
+
+<isolated-directive fiat="carFiat" red="colorRed" blue="{{colorBlue}}"></isolated-directive>

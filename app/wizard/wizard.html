@@ -1,0 +1,24 @@
+
+<p>This text comes from the controller. We will use shared scope to pass data around the wizard directives.</p>
+<div class="form-group">
+	<label class="control-label">Personal data</label>
+	<br/>
+	Username: <span>{{user.personalData.username}}</span><span ng-if="!user.personalData.username">no data yet</span>
+	<br/>
+	Email: <span>{{user.personalData.email}}</span><span ng-if="!user.personalData.email">no data yet</span>
+</div>
+<div class="form-group">
+	<label class="control-label">Address</label>
+	<br/>
+	Country: <span>{{user.address.country}}</span><span ng-if="!user.address.country">no data yet</span>
+	<br/>
+	City: <span>{{user.address.city}}</span><span ng-if="!user.address.city">no data yet</span>
+</div>
+<hr/>
+
+<div ng-show="regProcess.step==1">
+	<user-info></user-info>
+</div>
+<div ng-show="regProcess.step==2">
+	<user-address></user-address>
+</div>
